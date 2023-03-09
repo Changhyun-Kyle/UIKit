@@ -10,6 +10,8 @@ import UIKit
 class TextFieldContentView: UIView, UIContentView {
     struct Configuration: UIContentConfiguration {
         var text: String? = ""
+        var onChange: (String) -> Void = { _ in }
+        
         func makeContentView() -> UIView & UIContentView {
             return TextFieldContentView(self)
         }
@@ -31,6 +33,7 @@ class TextFieldContentView: UIView, UIContentView {
         self.configuration = configuration
         super.init(frame: .zero)
         addPinnedSubView(textField, insets: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
+        textField.addTarget(self, action: #selector(didChange(_:)), for: .editingChanged)
         // 텍스트 필드에 내용이 있을 때 후행 쪽에 텍스트 지우기 버튼을 표시
         textField.clearButtonMode = .whileEditing
     }
@@ -42,6 +45,11 @@ class TextFieldContentView: UIView, UIContentView {
     func configure(configuration: UIContentConfiguration) {
         guard let configuration = configuration as? Configuration else { return }
         textField.text = configuration.text
+    }
+    
+    @objc private func didChange(_ sender: UITextField) {
+        guard let configuration = configuration as? TextFieldContentView.Configuration else { return }
+        configuration.onChange(textField.text ?? "")
     }
 }
 
