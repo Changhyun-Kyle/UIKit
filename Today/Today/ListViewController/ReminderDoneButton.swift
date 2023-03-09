@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Custom Button
 class ReminderDoneButton: UIButton {
-    
+    var id: Reminder.ID?
 }

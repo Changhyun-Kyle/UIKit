@@ -39,23 +39,21 @@ class ReminderListViewController: UICollectionViewController {
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
         })
         
-        var snapShot = Snapshot()
-        // 스냅샷에 단일 섹션 추가
-        snapShot.appendSections([0])
-        // 아래 코드 리팩토링
-        snapShot.appendItems(reminders.map { $0.id })
-        // snapShot.appendItems(Reminder.sampleData.map { $0.title })
-        /*
-        var reminderTitles = [String]()
-        for reminder in Reminder.sampleData {
-            reminderTitles.append(reminder.title)
-        }
-        snapShot.appendItems(reminderTitles)
-        */
-        // 스냅샷을 데이터 소스에 적용
-        dataSource.apply(snapShot)
+        updateSnapshot()
         
         collectionView.dataSource = dataSource
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        let id = reminders[indexPath.item].id
+        pushDetailViewForReminder(withId: id)
+        return false
+    }
+    
+    func pushDetailViewForReminder(withId id: Reminder.ID) {
+        let reminder = reminder(withId: id)
+        let viewController = ReminderViewController(reminder: reminder)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     private func listLayout() -> UICollectionViewCompositionalLayout {
