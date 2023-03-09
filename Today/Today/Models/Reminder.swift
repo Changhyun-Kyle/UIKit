@@ -7,7 +7,7 @@
 
 import Foundation
 // MARK: - Identifiable을 통해 컬렉션 보기에 포함할 항목과 데이터가 변경될 때 다시 로드할 항목을 데이터 소스에 알림
-struct Reminder: Identifiable {
+struct Reminder: Equatable, Identifiable {
     var id: String = UUID().uuidString
     var title: String
     var dueDate: Date

@@ -21,12 +21,13 @@ extension ReminderListViewController {
     }
     
     // MARK: - reloading 파라미터를 통해 변경된 id 값 전달
-    func updateSnapshot(reloading ids: [Reminder.ID] = []) {
+    func updateSnapshot(reloading idsThatChanged: [Reminder.ID] = []) {
+        let ids = idsThatChanged.filter { id in filteredReminders.contains(where: { $0.id == id }) }
         var snapShot = Snapshot()
         // 스냅샷에 단일 섹션 추가
         snapShot.appendSections([0])
         // 아래 코드 리팩토링
-        snapShot.appendItems(reminders.map { $0.id })
+        snapShot.appendItems(filteredReminders.map { $0.id })
         // snapShot.appendItems(Reminder.sampleData.map { $0.title })
         /*
         var reminderTitles = [String]()
@@ -83,6 +84,15 @@ extension ReminderListViewController {
         reminder.isComplete.toggle()
         updateReminder(reminder)
         updateSnapshot(reloading: [id])
+    }
+    
+    func addReminder(_ reminder: Reminder) {
+        reminders.append(reminder)
+    }
+    
+    func deleteReminder(withId id: Reminder.ID) {
+        let index = reminders.indexOfReminder(withId: id)
+        reminders.remove(at: index)
     }
     
     private func doneButtonAccessibilityAction(for reminder: Reminder) -> UIAccessibilityCustomAction {
