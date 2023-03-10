@@ -20,6 +20,8 @@ extension ReminderListViewController {
         NSLocalizedString("Not completed", comment: "Reminder not completed value")
     }
     
+    private var reminderStore: ReminderStore { ReminderStore.shared }
+    
     // MARK: - reloading 파라미터를 통해 변경된 id 값 전달
     func updateSnapshot(reloading idsThatChanged: [Reminder.ID] = []) {
         let ids = idsThatChanged.filter { id in filteredReminders.contains(where: { $0.id == id }) }
@@ -41,6 +43,7 @@ extension ReminderListViewController {
         }
         // 스냅샷을 데이터 소스에 적용
         dataSource.apply(snapShot)
+        headerView?.progress = progress
     }
     
     // 셀의 내용과 모양을 구성하는 방법 지정
@@ -74,8 +77,15 @@ extension ReminderListViewController {
     }
     
     func updateReminder(_ reminder: Reminder) {
-        let index = reminders.indexOfReminder(withId: reminder.id)
-        reminders[index] = reminder
+        do {
+            try reminderStore.save(reminder)
+            let index = reminders.indexOfReminder(withId: reminder.id)
+            reminders[index] = reminder
+        } catch TodayError.accessDenied {
+        } catch {
+            showError(error)
+        }
+        
     }
     
     // MARK: - 버튼이 눌렸을 때 실행되는 함수
@@ -87,12 +97,52 @@ extension ReminderListViewController {
     }
     
     func addReminder(_ reminder: Reminder) {
-        reminders.append(reminder)
+        var reminder = reminder
+        do {
+            let idFromStore = try reminderStore.save(reminder)
+            reminder.id = idFromStore
+            reminders.append(reminder)
+        } catch TodayError.accessDenied {
+            
+        } catch {
+            showError(error)
+        }
     }
     
     func deleteReminder(withId id: Reminder.ID) {
-        let index = reminders.indexOfReminder(withId: id)
-        reminders.remove(at: index)
+        do {
+            try reminderStore.remove(with: id)
+            let index = reminders.indexOfReminder(withId: id)
+            reminders.remove(at: index)
+        } catch TodayError.accessDenied {
+        } catch {
+            showError(error)
+        }
+        
+    }
+    
+    func prepareReminderStore() {
+        Task {
+            do {
+                try await reminderStore.requestAccess()
+                reminders = try await reminderStore.readAll()
+                NotificationCenter.default.addObserver(self, selector: #selector(eventstoreChanged(_:)), name: .EKEventStoreChanged, object: nil)
+            } catch TodayError.accessDenied, TodayError.accessRestricted {
+                #if DEBUG
+                reminders = Reminder.sampleData
+                #endif
+            } catch {
+                showError(error)
+            }
+            updateSnapshot()
+        }
+    }
+    
+    func reminderStoreChanged() {
+        Task {
+            reminders = try await reminderStore.readAll()
+            updateSnapshot()
+        }
     }
     
     private func doneButtonAccessibilityAction(for reminder: Reminder) -> UIAccessibilityCustomAction {
