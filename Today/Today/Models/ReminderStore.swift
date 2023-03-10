@@ -52,4 +52,35 @@ final class ReminderStore {
         }
         return reminders
     }
+    // MARK: - return 값을 사용하지 않아도 warning 메세지를 나오지 않도록 설정
+    @discardableResult
+    func save(_ reminder: Reminder) throws -> Reminder.ID {
+        guard isAvailable else {
+            throw TodayError.accessDenied
+        }
+        let ekReminder: EKReminder
+        do {
+            ekReminder = try read(with: reminder.id)
+        } catch {
+            ekReminder = EKReminder(eventStore: ekStore)
+        }
+        ekReminder.update(using: reminder, in: ekStore)
+        try ekStore.save(ekReminder, commit: true)
+        return ekReminder.calendarItemIdentifier
+    }
+    
+    func remove(with id: Reminder.ID) throws {
+        guard isAvailable else {
+            throw TodayError.accessDenied
+        }
+        let ekReminder = try read(with: id)
+        try ekStore.remove(ekReminder, commit: true)
+    }
+    
+    private func read(with id: Reminder.ID) throws -> EKReminder {
+        guard let ekReminder = ekStore.calendarItem(withIdentifier: id) as? EKReminder else {
+            throw TodayError.failureReadingCalendarItem
+        }
+        return ekReminder
+    }
 }

@@ -9,6 +9,10 @@ import UIKit
 
 // MARK: - doneButton tap 시 작동
 extension ReminderListViewController {
+    @objc func eventstoreChanged(_ notification: NSNotification) {
+        reminderStoreChanged()
+    }
+    
     @objc func didPressDoneButton(_ sender: ReminderDoneButton) {
         guard let id = sender.id else { return }
         completeReminder(withId: id)
