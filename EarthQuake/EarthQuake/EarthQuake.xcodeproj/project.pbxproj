@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2701A68029BEC1C0007F92D5 /* GeoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701A67F29BEC1C0007F92D5 /* GeoJSON.swift */; };
+		2701A68229BEC477007F92D5 /* QuakeLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701A68129BEC477007F92D5 /* QuakeLocation.swift */; };
+		2701A68429BF1B8B007F92D5 /* HTTPDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701A68329BF1B8B007F92D5 /* HTTPDataDownloader.swift */; };
+		2701A68629BF1CE8007F92D5 /* QuakeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701A68529BF1CE8007F92D5 /* QuakeClient.swift */; };
+		2701A68729BF1E67007F92D5 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E438F29BEACFC007AB869 /* TestData.swift */; };
+		2701A68929BF1E88007F92D5 /* TestDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701A68829BF1E88007F92D5 /* TestDownloader.swift */; };
+		2701A68B29BF1F67007F92D5 /* QuakeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701A68A29BF1F67007F92D5 /* QuakeProvider.swift */; };
+		2701A68E29BF23AD007F92D5 /* Quakes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701A68D29BF23AD007F92D5 /* Quakes.swift */; };
+		2701A69029BF2498007F92D5 /* QuakeMagnitude.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701A68F29BF2497007F92D5 /* QuakeMagnitude.swift */; };
+		2701A69229BF25B5007F92D5 /* Quake+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701A69129BF25B5007F92D5 /* Quake+Color.swift */; };
+		2701A69429BF26F4007F92D5 /* QuakeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701A69329BF26F4007F92D5 /* QuakeRow.swift */; };
+		2701A69729BF2CCC007F92D5 /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701A69629BF2CCC007F92D5 /* SelectButton.swift */; };
+		278E437129BEA877007AB869 /* EarthQuakeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E437029BEA877007AB869 /* EarthQuakeApp.swift */; };
+		278E437529BEA878007AB869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E437429BEA878007AB869 /* Assets.xcassets */; };
+		278E437829BEA878007AB869 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E437729BEA878007AB869 /* Preview Assets.xcassets */; };
+		278E437F29BEA89F007AB869 /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E437E29BEA89F007AB869 /* Quake.swift */; };
+		278E438129BEAC0F007AB869 /* QuakeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E438029BEAC0F007AB869 /* QuakeError.swift */; };
+		278E438929BEACE0007AB869 /* EarthQuakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E438829BEACE0007AB869 /* EarthQuakeTests.swift */; };
+		278E439529BEB3D4007AB869 /* testQuakesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 278E439229BEB3D4007AB869 /* testQuakesData.json */; };
+		278E439629BEB3D4007AB869 /* testDetail_hv72783692.json in Resources */ = {isa = PBXBuildFile; fileRef = 278E439329BEB3D4007AB869 /* testDetail_hv72783692.json */; };
+		278E439729BEB3D4007AB869 /* testFeature_nc73649170.json in Resources */ = {isa = PBXBuildFile; fileRef = 278E439429BEB3D4007AB869 /* testFeature_nc73649170.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		278E438A29BEACE0007AB869 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 278E436529BEA877007AB869 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 278E436C29BEA877007AB869;
+			remoteInfo = EarthQuake;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2701A67F29BEC1C0007F92D5 /* GeoJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoJSON.swift; sourceTree = "<group>"; };
+		2701A68129BEC477007F92D5 /* QuakeLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeLocation.swift; sourceTree = "<group>"; };
+		2701A68329BF1B8B007F92D5 /* HTTPDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDataDownloader.swift; sourceTree = "<group>"; };
+		2701A68529BF1CE8007F92D5 /* QuakeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeClient.swift; sourceTree = "<group>"; };
+		2701A68829BF1E88007F92D5 /* TestDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDownloader.swift; sourceTree = "<group>"; };
+		2701A68A29BF1F67007F92D5 /* QuakeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeProvider.swift; sourceTree = "<group>"; };
+		2701A68D29BF23AD007F92D5 /* Quakes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quakes.swift; sourceTree = "<group>"; };
+		2701A68F29BF2497007F92D5 /* QuakeMagnitude.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeMagnitude.swift; sourceTree = "<group>"; };
+		2701A69129BF25B5007F92D5 /* Quake+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quake+Color.swift"; sourceTree = "<group>"; };
+		2701A69329BF26F4007F92D5 /* QuakeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeRow.swift; sourceTree = "<group>"; };
+		2701A69629BF2CCC007F92D5 /* SelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectButton.swift; sourceTree = "<group>"; };
+		278E436D29BEA877007AB869 /* EarthQuake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarthQuake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		278E437029BEA877007AB869 /* EarthQuakeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthQuakeApp.swift; sourceTree = "<group>"; };
+		278E437429BEA878007AB869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		278E437729BEA878007AB869 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		278E437E29BEA89F007AB869 /* Quake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quake.swift; sourceTree = "<group>"; };
+		278E438029BEAC0F007AB869 /* QuakeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeError.swift; sourceTree = "<group>"; };
+		278E438629BEACDF007AB869 /* EarthQuakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthQuakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		278E438829BEACE0007AB869 /* EarthQuakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthQuakeTests.swift; sourceTree = "<group>"; };
+		278E438F29BEACFC007AB869 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		278E439229BEB3D4007AB869 /* testQuakesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testQuakesData.json; sourceTree = "<group>"; };
+		278E439329BEB3D4007AB869 /* testDetail_hv72783692.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testDetail_hv72783692.json; sourceTree = "<group>"; };
+		278E439429BEB3D4007AB869 /* testFeature_nc73649170.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testFeature_nc73649170.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		278E436A29BEA877007AB869 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		278E438329BEACDF007AB869 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2701A67E29BEC1AE007F92D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2701A67F29BEC1C0007F92D5 /* GeoJSON.swift */,
+				278E437E29BEA89F007AB869 /* Quake.swift */,
+				2701A68129BEC477007F92D5 /* QuakeLocation.swift */,
+				2701A68329BF1B8B007F92D5 /* HTTPDataDownloader.swift */,
+				2701A68529BF1CE8007F92D5 /* QuakeClient.swift */,
+				278E438029BEAC0F007AB869 /* QuakeError.swift */,
+				2701A68A29BF1F67007F92D5 /* QuakeProvider.swift */,
+				2701A69129BF25B5007F92D5 /* Quake+Color.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2701A68C29BF2397007F92D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2701A68D29BF23AD007F92D5 /* Quakes.swift */,
+				2701A68F29BF2497007F92D5 /* QuakeMagnitude.swift */,
+				2701A69329BF26F4007F92D5 /* QuakeRow.swift */,
+				2701A69529BF2CB3007F92D5 /* ToolbarContents */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2701A69529BF2CB3007F92D5 /* ToolbarContents */ = {
+			isa = PBXGroup;
+			children = (
+				2701A69629BF2CCC007F92D5 /* SelectButton.swift */,
+			);
+			path = ToolbarContents;
+			sourceTree = "<group>";
+		};
+		278E436429BEA877007AB869 = {
+			isa = PBXGroup;
+			children = (
+				278E436F29BEA877007AB869 /* EarthQuake */,
+				278E439129BEB3D4007AB869 /* SampleData */,
+				278E438729BEACE0007AB869 /* EarthQuakeTests */,
+				278E436E29BEA877007AB869 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		278E436E29BEA877007AB869 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				278E436D29BEA877007AB869 /* EarthQuake.app */,
+				278E438629BEACDF007AB869 /* EarthQuakeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		278E436F29BEA877007AB869 /* EarthQuake */ = {
+			isa = PBXGroup;
+			children = (
+				278E437029BEA877007AB869 /* EarthQuakeApp.swift */,
+				2701A67E29BEC1AE007F92D5 /* Models */,
+				2701A68C29BF2397007F92D5 /* Views */,
+				278E437429BEA878007AB869 /* Assets.xcassets */,
+				278E437629BEA878007AB869 /* Preview Content */,
+			);
+			path = EarthQuake;
+			sourceTree = "<group>";
+		};
+		278E437629BEA878007AB869 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				278E437729BEA878007AB869 /* Preview Assets.xcassets */,
+				278E438F29BEACFC007AB869 /* TestData.swift */,
+				2701A68829BF1E88007F92D5 /* TestDownloader.swift */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		278E438729BEACE0007AB869 /* EarthQuakeTests */ = {
+			isa = PBXGroup;
+			children = (
+				278E438829BEACE0007AB869 /* EarthQuakeTests.swift */,
+			);
+			path = EarthQuakeTests;
+			sourceTree = "<group>";
+		};
+		278E439129BEB3D4007AB869 /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+				278E439229BEB3D4007AB869 /* testQuakesData.json */,
+				278E439329BEB3D4007AB869 /* testDetail_hv72783692.json */,
+				278E439429BEB3D4007AB869 /* testFeature_nc73649170.json */,
+			);
+			path = SampleData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		278E436C29BEA877007AB869 /* EarthQuake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 278E437B29BEA878007AB869 /* Build configuration list for PBXNativeTarget "EarthQuake" */;
+			buildPhases = (
+				278E436929BEA877007AB869 /* Sources */,
+				278E436A29BEA877007AB869 /* Frameworks */,
+				278E436B29BEA877007AB869 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EarthQuake;
+			productName = EarthQuake;
+			productReference = 278E436D29BEA877007AB869 /* EarthQuake.app */;
+			productType = "com.apple.product-type.application";
+		};
+		278E438529BEACDF007AB869 /* EarthQuakeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 278E438C29BEACE0007AB869 /* Build configuration list for PBXNativeTarget "EarthQuakeTests" */;
+			buildPhases = (
+				278E438229BEACDF007AB869 /* Sources */,
+				278E438329BEACDF007AB869 /* Frameworks */,
+				278E438429BEACDF007AB869 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				278E438B29BEACE0007AB869 /* PBXTargetDependency */,
+			);
+			name = EarthQuakeTests;
+			productName = EarthQuakeTests;
+			productReference = 278E438629BEACDF007AB869 /* EarthQuakeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		278E436529BEA877007AB869 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					278E436C29BEA877007AB869 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					278E438529BEACDF007AB869 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 278E436C29BEA877007AB869;
+					};
+				};
+			};
+			buildConfigurationList = 278E436829BEA877007AB869 /* Build configuration list for PBXProject "EarthQuake" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 278E436429BEA877007AB869;
+			productRefGroup = 278E436E29BEA877007AB869 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				278E436C29BEA877007AB869 /* EarthQuake */,
+				278E438529BEACDF007AB869 /* EarthQuakeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		278E436B29BEA877007AB869 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278E437829BEA878007AB869 /* Preview Assets.xcassets in Resources */,
+				278E437529BEA878007AB869 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		278E438429BEACDF007AB869 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278E439629BEB3D4007AB869 /* testDetail_hv72783692.json in Resources */,
+				278E439729BEB3D4007AB869 /* testFeature_nc73649170.json in Resources */,
+				278E439529BEB3D4007AB869 /* testQuakesData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		278E436929BEA877007AB869 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2701A69029BF2498007F92D5 /* QuakeMagnitude.swift in Sources */,
+				2701A68B29BF1F67007F92D5 /* QuakeProvider.swift in Sources */,
+				2701A68729BF1E67007F92D5 /* TestData.swift in Sources */,
+				2701A69229BF25B5007F92D5 /* Quake+Color.swift in Sources */,
+				2701A68029BEC1C0007F92D5 /* GeoJSON.swift in Sources */,
+				2701A68429BF1B8B007F92D5 /* HTTPDataDownloader.swift in Sources */,
+				2701A68629BF1CE8007F92D5 /* QuakeClient.swift in Sources */,
+				2701A68E29BF23AD007F92D5 /* Quakes.swift in Sources */,
+				278E438129BEAC0F007AB869 /* QuakeError.swift in Sources */,
+				2701A69729BF2CCC007F92D5 /* SelectButton.swift in Sources */,
+				2701A68229BEC477007F92D5 /* QuakeLocation.swift in Sources */,
+				2701A69429BF26F4007F92D5 /* QuakeRow.swift in Sources */,
+				2701A68929BF1E88007F92D5 /* TestDownloader.swift in Sources */,
+				278E437F29BEA89F007AB869 /* Quake.swift in Sources */,
+				278E437129BEA877007AB869 /* EarthQuakeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		278E438229BEACDF007AB869 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278E438929BEACE0007AB869 /* EarthQuakeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		278E438B29BEACE0007AB869 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 278E436C29BEA877007AB869 /* EarthQuake */;
+			targetProxy = 278E438A29BEACE0007AB869 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		278E437929BEA878007AB869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		278E437A29BEA878007AB869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		278E437C29BEA878007AB869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EarthQuake/Preview Content\"";
+				DEVELOPMENT_TEAM = K9NKZR257N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "changhyun-kyle.EarthQuake";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		278E437D29BEA878007AB869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EarthQuake/Preview Content\"";
+				DEVELOPMENT_TEAM = K9NKZR257N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "changhyun-kyle.EarthQuake";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		278E438D29BEACE0007AB869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K9NKZR257N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "changhyun-kyle.EarthQuakeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EarthQuake.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EarthQuake";
+			};
+			name = Debug;
+		};
+		278E438E29BEACE0007AB869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K9NKZR257N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "changhyun-kyle.EarthQuakeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EarthQuake.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EarthQuake";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		278E436829BEA877007AB869 /* Build configuration list for PBXProject "EarthQuake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				278E437929BEA878007AB869 /* Debug */,
+				278E437A29BEA878007AB869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		278E437B29BEA878007AB869 /* Build configuration list for PBXNativeTarget "EarthQuake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				278E437C29BEA878007AB869 /* Debug */,
+				278E437D29BEA878007AB869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		278E438C29BEACE0007AB869 /* Build configuration list for PBXNativeTarget "EarthQuakeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				278E438D29BEACE0007AB869 /* Debug */,
+				278E438E29BEACE0007AB869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 278E436529BEA877007AB869 /* Project object */;
+}
